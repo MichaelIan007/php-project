@@ -2720,7 +2720,7 @@ a.box:active {
 .content h4,
 .content h5,
 .content h6 {
-  color: #363636;
+  color: white;
   font-weight: 600;
   line-height: 1.125;
 }
@@ -5115,8 +5115,8 @@ a.tag:hover {
 }
 
 .title {
-  color: #363636;
-  font-size: 2rem;
+  color: #ffffff;
+  font-size: 3rem;
   font-weight: 600;
   line-height: 1.125;
 }
