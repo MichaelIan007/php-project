@@ -8,6 +8,11 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link rel="stylesheet" href="css/bulma.css" />
     <script src="main.js"></script>
+    <style>
+        a {
+            color: white;
+        }
+    </style>
 </head>
 <body>
 <section class="hero is-fullheight">
@@ -25,9 +30,9 @@
 
                 <div class="navbar-menu" id="navMenu">
                     <div class="navbar-end">
-                        <a href="#" class="navbar-item">Quiz 1</a>
-                        <a href="#" class="navbar-item">Quiz 2</a>
-                        <a href="#" class="navbar-item">Quiz 3</a>
+                        <a href="#q1" class="navbar-item">Quiz 1</a>
+                        <a href="#q2" class="navbar-item">Quiz 2</a>
+                        <a href="#q3" class="navbar-item">Quiz 3</a>
                         <a href="#" class="navbar-item">Contact</a>
                     </div>
                 </div>
@@ -37,7 +42,8 @@
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
-                    Gaming Quizes
+                    Gaming Quizes<br>
+                    Scroll Down 
                 </h1>
             </div>
 
@@ -82,49 +88,57 @@
         <div class="container1">
             <div class="rows">
                 <div class="row">
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="hovereffect">
-                            <img class="image" src="/img/image1.jpg" alt="Quiz 1">
-                        <div class="overlay">
-                    <h2>Quiz 1:</h2>
-				<p>
-					<a href="#"><u>Playstation</u></a>
-				</p>
+                <h2 id="q1" class="header-2">Quiz 1:</h2>
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                            <img src="img/pslogo.jpg" alt="Paris" style="width:300px;height:200px">
+                            </div>
+                            <div class="flip-box-back">
+                        <h2><u><a href="test1.php">Playstation</a></u></h2>
+                            </div>
                         </div>
-                        </div>
-                    </div>
+                    </div> 
                 </div>
                 <br>
+                <h2>OR</h2>
                 <div class="row">
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="hovereffect">
-                            <img class="image" src="/img/image2.jpg" alt="Quiz 2">
-                        <div class="overlay">
-                    <h2>Quiz 2:</h2>
-				<p>
-					<a href="#"><u>Xbox</u></a>
-				</p>
+                <h2 id="q2" class="header-2">Quiz 2:</h2>
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                            <img src="img/xboxlogo.jpg" alt="Paris" style="width:300px;height:200px">
+                            </div>
+                            <div class="flip-box-back">
+                        <h2><u><a href="test2.php">Xbox</a></u></h2>
+                            </div>
                         </div>
-                        </div>
-                    </div>
+                    </div> 
                 </div>
                 <br>
+                <h2>OR</h2>
                 <div class="row">
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="hovereffect">
-                            <img class="image" src="/img/image3.jpg" alt="Quiz 3">
-                        <div class="overlay">
-                    <h2>Quiz 3:</h2>
-				<p>
-					<a href="#"><u>PC</u></a>
-				</p>
+                <h2 id="q3" class="header-2">Quiz 3:</h2>
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                            <a href="test3.php"><img src="img/pclogo.jpg" alt="Paris" style="width:3    00px;height:200px"></a>
+                            </div>
+                            <div class="flip-box-back">
+                            <h2><u><a href="test3.php">PC</a></h2>
+                            </div>
                         </div>
-                        </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="parallax" id="footer"></div>
+
+    <footer class="footer">
+        <h2>Brought to you by R3kt-Tech</h2>
+    </footer>
 
     <script>
     (function() {
