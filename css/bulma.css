@@ -250,8 +250,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 100%;
+  font-size: 30px;
   font-weight: normal;
+  text-align: center;
+  color: rgb(228, 24, 24);
+  opacity: 1;
 }
 
 ul {
@@ -10283,7 +10286,7 @@ label.panel-block:hover {
 }
 
 .footer {
-  background-color: #fafafa;
+  background-color: rgb(41, 41, 41);
   padding: 3rem 1.5rem 6rem;
 }
 /*# sourceMappingURL=bulma.css.map */
