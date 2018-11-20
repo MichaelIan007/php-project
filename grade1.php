@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bulma.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/quiz-styling.css" />
     <script src="main.js"></script>
 </head>
 <body>
@@ -14,7 +15,7 @@
 		<h1>Playstation Results</h1>
 	</header>
 <?php
-	$qanswers = array('3', '1', '4', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2');
+	$qanswers = array('2', '0', '3', '2', '3', '2', '2', '0', '0', '2', '0', '1', '3', '3', '2', '1', '2', '1', '2', '1');
 	$count=0;
 	if (isset($_POST)) {
 		$results = array();
@@ -27,69 +28,56 @@
 	 	}
 		$total = count($results);
 			switch ($total) {
-				case ($total >= 16) :
+				case ($total > 15) :
 					?>
-						<section class="excellent">
-							<div class="score"><?php echo $total; ?><span>/20</span></div>
+						<section class="siteInfo">
+							<div class="Awesomeness"><h1><?php echo $total; ?>/20</h1></div>
 							<h1>
-								Congratulations
-							</h1>
-							<p></p>
-								This is excellent, however, even though you've just achieved a perfect score, I'm sure Evan would have found some way to achieve better.
-							</p>
+								Congratulations<br>
+								You can formally Recognise yourself as A GAMER, I solute you Otaku.
+							</h1>	
 						</section>
 					<?php
 					break;
 				
-				case ($total >= 10 && $total < 16):
+				case ($total > 10 && $total < 16):
 					?>
-						<section class="okay">	
-							<div class="score"><?php echo $total; ?><span>/20</span></div>
+						<section class="siteInfo">	
+							<div class="alright"><h1><?php echo $total; ?>/20</div>
 
 							<h1>
-								Uhm...
+								Damn!<br>
+								So close, yet not there...
 							</h1>
-							<p>
-								Somebody forgot to do their homework. This is terribly un-Evan-like of you.
-							</p>
 						</section>
 					<?php
 					break;
 				
-				case ($total < 10 && $total >= 5):
+				case ($total < 11 && $total > 5):
 					?>
-						<section class="bad">	
-							<div class="score"><?php echo $total; ?><span>/20</span></div>
+						<section class="siteInfo">	
+							<div class="bad"><h1><?php echo $total; ?>/20</div>
 
 							<h1>
-								IDK...
-												
+								Wow!<br>			
+								This is bad, please do some research and give it another go.	
 							</h1>
-							<p>
-								Ugh, are you even trying?		
-							</p>
 						</section>
 					<?php
 					break;
 				
-				case ($total < 5):
+				case ($total < 6):
 					?>
-						<section class="bad">	
-							<div class="score"><?php echo $total; ?><span>/20</span></div>
-
+						<section class="siteInfo">	
+							<div class="Really-bad"><h1><?php echo $total; ?>/20</div>
 							<h1>
-								Haha, what?!
-												
+								Oh my word....<br>	
+								Not even close....
 							</h1>
-							<p>
-								This score is absolutely f***ing terrible. I can't believe people like you have actually survived natural selection.		
-							</p>
 						</section>
 					<?php
 					break;
-				
 				default:
-					
 					break;
 		}
 	}
