@@ -7,12 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/bulma.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="css/quiz-styling.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <script src="main.js"></script>
 </head>
 <body>
     
+<section class="hero is-fullheight">
+        <nav class="navbar is-success">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="index.php" class="navbar-item">Quiz</a>
+                </div>
+            </div>
+        </nav>
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Playstation Quiz<br>
+                    Scroll Down
+                </h1>
+            </div>
+
+        </div>
+    </section>
+	<div class="parallax"></div>
+<section class="hero is-fullheight">
 <header>
-		<h1>Playstation Results</h1>
+		<h2>Playstation Results</h2>
 	</header>
 <?php
 	$qanswers = array('2', '0', '3', '2', '3', '2', '2', '0', '0', '2', '0', '1', '3', '3', '2', '1', '2', '1', '2', '1');
@@ -31,11 +52,11 @@
 				case ($total > 15) :
 					?>
 						<section class="siteInfo">
-							<div class="Awesomeness"><h1><?php echo $total; ?>/20</h1></div>
-							<h1>
+							<div class="Awesomeness"><h2><?php echo $total; ?>/20</h2></div>
+							<h2>
 								Congratulations<br>
 								You can formally Recognise yourself as A GAMER, I solute you Otaku.
-							</h1>	
+							</h2>	
 						</section>
 					<?php
 					break;
@@ -43,12 +64,12 @@
 				case ($total > 10 && $total < 16):
 					?>
 						<section class="siteInfo">	
-							<div class="alright"><h1><?php echo $total; ?>/20</div>
+							<div class="alright"><h2><?php echo $total; ?>/20</h2></div>
 
-							<h1>
+							<h2>
 								Damn!<br>
 								So close, yet not there...
-							</h1>
+							</h2>
 						</section>
 					<?php
 					break;
@@ -56,12 +77,12 @@
 				case ($total < 11 && $total > 5):
 					?>
 						<section class="siteInfo">	
-							<div class="bad"><h1><?php echo $total; ?>/20</div>
+							<div class="bad"><h2><?php echo $total; ?>/20</h2></div>
 
-							<h1>
+							<h2>
 								Wow!<br>			
 								This is bad, please do some research and give it another go.	
-							</h1>
+							</h2>
 						</section>
 					<?php
 					break;
@@ -69,11 +90,11 @@
 				case ($total < 6):
 					?>
 						<section class="siteInfo">	
-							<div class="Really-bad"><h1><?php echo $total; ?>/20</div>
-							<h1>
+							<div class="Really-bad"><h2><?php echo $total; ?>/20</h2></div>
+							<h2>
 								Oh my word....<br>	
 								Not even close....
-							</h1>
+							</h2>
 						</section>
 					<?php
 					break;
@@ -82,7 +103,10 @@
 		}
 	}
 ?>
-
+<br>
+<br>
+<br>
+</section>
 	<section class="submit">
 		<form action="index.php" method="post">
 		<h2>Retake Test</h2>
