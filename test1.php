@@ -9,6 +9,18 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/quiz-styling.css" />
     <script src="main.js"></script>
+    <style>
+.columns {
+    text-align: center;
+    line-height: 50px;
+    
+}
+.rows {
+    text-align: center;
+    line-height: 30px;
+    word-spacing: 10px;
+}
+    </style>
 </head>
 <body>
 <section class="hero is-fullheight">
@@ -16,12 +28,6 @@
             <div class="container">
                 <div class="navbar-brand">
                     <a href="index.php" class="navbar-item">Quiz</a>
-
-                    <span class="navbar-burger burger" data-target="navMenu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </span>
                 </div>
             </div>
         </nav>
@@ -78,30 +84,30 @@
 ?>
     <?php
 	for ($i = 0; $i < count($quizq); $i++) { ?>
-
-	<section class='box-set'>
+    <div class="container">
+        <div class="columns">
 			<h2>
 			    Question <span class="num"> <?php echo $i+1 ?> </span>
 			</h2>
+        </div>
+        <div class="columns">
 			<p>
 				<?php echo $quizq[$i]['qst']; ?>
 			</p>
-            
-			<section class='grid'>
+        </div>
+        <div class="rows">
 			<?php 
 				$x = 0;
 			for ($n = $i*4; $n < ($i+1)*4; $n++) { 
                 ?>
-            <section class='grid-item'>
-				<input type='radio' name="<?php echo $i; ?>" value="<?php echo $x ?>" id="<?php echo $n ?>"><label class="option" for="<?php echo $n ?>"><?php echo $quizq[$i][$x] ?></label>
-            </section>
+				<input type='radio' name="<?php echo $i; ?>" value="<?php echo $x ?>" id="<?php echo $n ?>">
+                <label class="option" for="<?php echo $n ?>"><?php echo $quizq[$i][$x] ?></label>
             <?php
 					$x++; 
-		
 		} ?>
-			</section>
-            
-	</section>
+        </div>
+        </div>
+	
 <hr>    
 	<?php }
     ?>
