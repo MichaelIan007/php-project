@@ -110,7 +110,8 @@
 		<form action="index.php" method="post">
 		<h2>Retake Test</h2>
 		<input type="submit" value="Retake">
-		
+		<br>
+		<br>
 		</form>
 	</section>
 

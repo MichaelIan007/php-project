@@ -9,17 +9,18 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/quiz-styling.css" />
     <script src="main.js"></script>
+    <!-- Added script tags to overwrite previous styles -->
     <style>
-.columns {
-    text-align: center;
-    line-height: 50px;
+    .columns {
+        text-align: center;
+        line-height: 50px;
     
-}
-.rows {
-    text-align: center;
-    line-height: 30px;
-    word-spacing: 10px;
-}
+    }
+    .rows {
+        text-align: center;
+        line-height: 30px;
+        word-spacing: 10px;
+    }
     </style>
 </head>
 <body>
@@ -33,6 +34,7 @@
         </nav>
         <div class="hero-body">
             <div class="container">
+                <!-- Title for Page -->
                 <h1 class="title">
                     Xbox Quiz<br>
                     Scroll Down
@@ -41,11 +43,21 @@
 
         </div>
     </section>
-
     <div class="parallax"></div>
-
+    <!-- Introduction -->
+    <section class="hero">
+        <div class="content">
+            <br>
+            <h1>Do you know Xbox?</h1>
+            <br>
+            <h2>Question 1 awaits you...</h2>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+    <div class="parallax"></div>
+    <!-- Using a form to display questions and sends the results to grade1.php-->
     <form action='grade2.php' method="post">
-
+    <!-- Php with an array inside an array that defines questions / answers 1 -> 20 -->
     <?php
 	    $quizq = array (
             array('qst' => 'Which character is etched into the inside of the Xbox One S?','Master Chief','Nathan Drake','Marcus Fenix','Conker'),
@@ -69,36 +81,41 @@
             array('qst' => 'Which online video streaming service is available on Xbox Live, but has some content that is limited to use from a Web browser instead?','Netflix','Hulu Plus','Youtube','Twitch'),
             array('qst' => 'Which Platform is the best?','Xbox','Playstation','PC','All mentioned'),
         );
-?>
+    ?>
+    <!-- Php function to displays Questions / answers to quiz -->
     <?php
 	for ($i = 0; $i < count($quizq); $i++) { ?>
-        <div class="container">
-            <div class="columns">
+        <div class="main-container">
+            <div class="column">
+                <!-- Displays heading "question 1" -> "question 20" -->
                 <h2>
                     Question <span class="num"> <?php echo $i+1 ?> </span>
                 </h2>
-            </div>
-            <div class="columns">
+                <!-- Displays the question being asked 1 -> 20 -->
                 <p>
                     <?php echo $quizq[$i]['qst']; ?>
                 </p>
-            </div>
-            <div class="rows">
                 <?php 
                     $x = 0;
                 for ($n = $i*4; $n < ($i+1)*4; $n++) { 
                     ?>
+                    <p class="left">
+                <br>
+                <!-- Shows the radio box for selecting your answer and displaying 4 answers to all questions -->
                     <input type='radio' name="<?php echo $i; ?>" value="<?php echo $x ?>" id="<?php echo $n ?>">
                     <label class="option" for="<?php echo $n ?>"><?php echo $quizq[$i][$x] ?></label>
+                    </p>
                 <?php
                         $x++; 
             } ?>
             </div>
-            </div>
-<hr>    
-	<?php }
+        </div>
+    <hr>    
+    <?php 
+    }
     ?>
-<div class="parallax"></div>
+    <div class="parallax"></div>
+    <!-- Text with the | Submit | button -->
     <section class="siteInfo">
         <h2>Click on the | Submit! | button<br>
             and we will see if you are<br>

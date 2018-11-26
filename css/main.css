@@ -24,10 +24,10 @@ p {
 
 .parallax {
 /* The image used */
-background-image: url("/img/wallpaper1.jpg");
+background-image: url("/img/bg.jpg");
 
 /* Set a specific height */
-height: 500px;
+height: 200px;
 
 /* Create the parallax scrolling effect */
 background-attachment: fixed;
@@ -68,7 +68,7 @@ background-size: cover;
   height: 100px;
 }
 
- /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+ /* The flip box container*/
  .flip-box {
   background-color: transparent;
   display: block;
@@ -91,12 +91,12 @@ background-size: cover;
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
+/* Does a horizontal flip when you move the mouse over the flip box container */
 .flip-box:hover .flip-box-inner {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
+/* Positioning of the front and back side */
 .flip-box-front, .flip-box-back {
   position: absolute;
   width: 100%;
@@ -104,13 +104,13 @@ background-size: cover;
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
+/* Style of the front side (fallback if image is missing) */
 .flip-box-front {
   background-color: #bbb;
   color: black;
 }
 
-/* Style the back side */
+/* Style of the back side */
 .flip-box-back {
   background-color: grey;
   opacity: 0.7;

@@ -9,17 +9,17 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/quiz-styling.css" />
     <script src="main.js"></script>
+    <!-- Added script tags to overwrite previous styles -->
     <style>
-.columns {
-    text-align: center;
-    line-height: 50px;
-    
-}
-.rows {
-    text-align: center;
-    line-height: 30px;
-    word-spacing: 10px;
-}
+    .columns {
+        text-align: center;
+        line-height: 50px;
+    }
+    .rows {
+        text-align: center;
+        line-height: 30px;
+        word-spacing: 10px;
+    }
     </style>
 </head>
 <body>
@@ -33,6 +33,7 @@
         </nav>
         <div class="hero-body">
             <div class="container">
+                <!-- Title for Page -->
                 <h1 class="title">
                     PC Quiz<br>
                     Scroll Down
@@ -43,9 +44,20 @@
     </section>
 
     <div class="parallax"></div>
-
+    <!-- Introduction -->
+    <section class="hero">
+        <div class="content">
+            <br>
+            <h1>Do you know PC?</h1>
+            <br>
+            <h2>Question 1 awaits you...</h2>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+    <div class="parallax"></div>
+    <!-- Using a form to display questions and sends the results to grade1.php-->
     <form action='grade3.php' method="post">
-
+    <!-- Php with an array inside an array that defines questions / answers 1 -> 20 -->
     <?php
 	    $quizq = array (
             array('qst' => 'In Uncharted 4, which PlayStation 1 title does Nathan Drake play?','Tomb Raider','Mortal Kombat','Crash Bandicoot','Final Fantasy 7'),
@@ -54,7 +66,7 @@
             array('qst' => 'Who features on the cover of UFC 2 alongside Ronda Rousey?','Sage Northcutt','Brock Lesnar','Jose Aldo','Conor Mcgregor'),
             array('qst' => 'What is the highest selling home console of all time?','Xbox 360','Nintendo Wii','Playstation 2','Atari 2600'),
             array('qst' => 'In the Legend of Zelda: The Wind Waker, how many Trifoce Shards do you have to collect?','8','9','3','6'),
-            array('qst' => 'In Overwatch, what was D.Va(s) former profession?','Professional Gamer','Professional Footballer','Professional Wrestler','Professional Skateboarder'),
+            array('qst' => 'In Overwatch, what was D. Va(s) former profession?','Professional Gamer','Professional Footballer','Professional Wrestler','Professional Skateboarder'),
             array('qst' => 'In the Metroid Series, what is the name of the main protagonist?','Solid Snake','Samus Aran','Seamus Morgan','Sephiroth'),
             array('qst' => 'Who is the creator of the Super Mario Bros series?','Hideo Kojima','Ralph Baer','Shigeru Miyamoto','Nolan Bushnel'),
             array('qst' => 'Which game was just released (11 November 2011) by Bethesda Softworks?','Elder Scrolls V: Skyrim','Elder Scrolls II: Skyrim','Battlefield 3','Modern Warefare 3'),
@@ -66,44 +78,49 @@
             array('qst' => 'What software is used to view web pages on the internet?','Web Browser','Page Browser','Internet Browser','All displayed'),
             array('qst' => 'The instructions that tell the computer what to do and how to do it?','Hardware','Software','Mouse','Monitor'),
             array('qst' => 'The heart (and brains) of the computer is the...','Ram','Rom','Motherboard','CPU'),
-            array('qst' => 'RAM stand for...','Really Awesome Monkeys','Rotten Apple Monkey','Random Access Memory','Raspberry and Mayonaise'),
+            array('qst' => 'RAM stands for...','Really Awesome Monkeys','Rotten Apple Monkey','Random Access Memory','Raspberry and Mayonaise'),
             array('qst' => 'Which Platform is the best?','PC','Playstation','Xbox','All Mentioned',),
         );
-?>
+    ?>
+    <!-- Php function to displays Questions / answers to quiz -->
     <?php
 	for ($i = 0; $i < count($quizq); $i++) { ?>
-        <div class="container">
-            <div class="columns">
+        <div class="main-container">
+            <div class="column">
+                <!-- Displays heading "question 1" -> "question 20" -->
                 <h2>
                     Question <span class="num"> <?php echo $i+1 ?> </span>
                 </h2>
-            </div>
-            <div class="columns">
+                <!-- Displays the question being asked 1 -> 20 -->
                 <p>
                     <?php echo $quizq[$i]['qst']; ?>
                 </p>
-            </div>
-            <div class="rows">
                 <?php 
                     $x = 0;
-                for ($n = $i*4; $n < ($i+1)*4; $n++) { 
-                    ?>
+                    for ($n = $i*4; $n < ($i+1)*4; $n++) { 
+                ?>
+                <p class="left">
+                <br>
+                <!-- Shows the radio box for selecting your answer and displaying 4 answers to all questions -->
                     <input type='radio' name="<?php echo $i; ?>" value="<?php echo $x ?>" id="<?php echo $n ?>">
                     <label class="option" for="<?php echo $n ?>"><?php echo $quizq[$i][$x] ?></label>
-                <?php
-                        $x++; 
+                </p>
+            <?php
+                $x++;
             } ?>
             </div>
-            </div>
-<hr>    
-	<?php }
+        </div>
+    <hr>    
+    <?php 
+    }
     ?>
-<div class="parallax"></div>
-    <section class="siteInfo">
-        <h2>Click on the | Submit! | button<br>
-            and we will see if you are<br>
-            "THE GAMER"
-        </h2><br>
+    <div class="parallax"></div>
+    <!-- Text with the | Submit | button -->
+        <section class="siteInfo">
+            <h2>Click on the | Submit! | button<br>
+                and we will see if you are<br>
+                "THE GAMER"
+            </h2><br>
         <input type="submit" value="Submit!">
         <br>
         <br>

@@ -9,17 +9,17 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/quiz-styling.css" />
     <script src="main.js"></script>
+    <!-- Added script tags to overwrite previous styles -->
     <style>
-.columns {
-    text-align: center;
-    line-height: 50px;
-    
-}
-.rows {
-    text-align: center;
-    line-height: 30px;
-    word-spacing: 10px;
-}
+    .columns {
+        text-align: center;
+        line-height: 50px;
+    }
+    .rows {
+        text-align: center;
+        line-height: 30px;
+        word-spacing: 10px;
+    }
     </style>
 </head>
 <body>
@@ -33,6 +33,7 @@
         </nav>
         <div class="hero-body">
             <div class="container">
+                <!-- Title for Page -->
                 <h1 class="title">
                     Playstation Quiz<br>
                     Scroll Down
@@ -41,9 +42,8 @@
 
         </div>
     </section>
-
     <div class="parallax"></div>
-
+    <!-- Introduction -->
     <section class="hero">
         <div class="content">
             <br>
@@ -53,11 +53,10 @@
             <p>Scroll Down</p>
         </div>
     </section>
-
     <div class="parallax"></div>
-
+    <!-- Using a form to display questions and sends the results to grade1.php-->
     <form action='grade1.php' method="post">
-
+    <!-- Php with an array inside an array that defines questions / answers 1 -> 20 -->
     <?php
 	    $quizq = array (
             array('qst' => 'What year did the original PlayStation release in North America?','1993','1994','1995','1996'),
@@ -81,37 +80,41 @@
             array('qst' => 'What was the mythical creatures name which had the body of a snake and could turned<br> a person to stone when one would look into her eyes','Poseidon','Minotaur','Medusa','Wyvern'),
             array('qst' => 'Which Platform is the best?','All that follow','Playstation','Xbox','PC'),
         );
-?>
+    ?>
+    <!-- Php function to displays Questions / answers to quiz -->
     <?php
 	for ($i = 0; $i < count($quizq); $i++) { ?>
-    <div class="container">
-        <div class="columns">
-			<h2>
-			    Question <span class="num"> <?php echo $i+1 ?> </span>
-			</h2>
-        </div>
-        <div class="columns">
-			<p>
-				<?php echo $quizq[$i]['qst']; ?>
-			</p>
-        </div>
-        <div class="rows">
-			<?php 
-				$x = 0;
-			for ($n = $i*4; $n < ($i+1)*4; $n++) { 
+        <div class="main-container">
+            <div class="column">
+                <!-- Displays heading "question 1" -> "question 20" -->
+                <h2>
+                    Question <span class="num"> <?php echo $i+1 ?> </span>
+                </h2>
+                <!-- Displays the question being asked 1 -> 20 -->
+                <p>
+                    <?php echo $quizq[$i]['qst']; ?>
+                </p>
+                <?php 
+                    $x = 0;
+                    for ($n = $i*4; $n < ($i+1)*4; $n++) { 
                 ?>
-				<input type='radio' name="<?php echo $i; ?>" value="<?php echo $x ?>" id="<?php echo $n ?>">
-                <label class="option" for="<?php echo $n ?>"><?php echo $quizq[$i][$x] ?></label>
+                <p class="left">
+                <br>
+                <!-- Shows the radio box for selecting your answer and displaying 4 answers to all questions -->
+                    <input type='radio' name="<?php echo $i; ?>" value="<?php echo $x ?>" id="<?php echo $n ?>">
+                    <label class="option" for="<?php echo $n ?>"><?php echo $quizq[$i][$x] ?></label>
+                </p>
             <?php
-					$x++; 
-		} ?>
+                $x++; 
+            } ?>
+            </div>
         </div>
-        </div>
-	
-<hr>    
-	<?php }
+    <hr>    
+    <?php 
+    }
     ?>
-<div class="parallax"></div>
+    <div class="parallax"></div>
+    <!-- Text with the | Submit | button -->
     <section class="siteInfo">
         <h2>Click on the | Submit! | button<br>
             and we will see if you are<br>
@@ -122,6 +125,5 @@
         <br>
 	</section>
 	</form>
-
 </body>
 </html>

@@ -1,0 +1,56 @@
+.box-set {
+    display: grid;
+    text-align: center;
+    margin-bottom: 3em;
+    border-color: red;
+}
+.hero {
+    height: 300px;
+}
+form {
+    background-color: #383838;
+}
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.grid-item {
+    padding: 2em;
+}
+.input {
+    padding: 10px;
+    padding-right: 5px;
+}
+p {
+    color: white;
+}
+.option {
+    padding: 2rem;
+    color: white;
+}
+.siteInfo {
+    text-align: center;
+    height: 100%;
+    padding-top: 80px;
+}
+hr {
+    padding: 0.8em;
+    background-color: rgba(0, 0, 0, 0.589);
+}
+.row {
+    display: grid;
+    grid-template-rows: repeat(1fr)
+}
+.column {
+    display: grid;
+    grid-template: auto;
+}
+.submit {
+    text-align: center;
+}
+.main-container {
+    text-align: center;
+}
+.left {
+    margin-left: 0;
+}

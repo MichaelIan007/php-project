@@ -3,18 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Gaming Platform Quiz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link rel="stylesheet" href="css/bulma.css" />
     <script src="main.js"></script>
+    <!-- Added style tags to overwrite previous styling -->
     <style>
-        a {
-            color: white;
-        }
+    a {
+        color: white;
+    }
     </style>
 </head>
 <body>
+    <!-- Head of page starts -->
 <section class="hero is-fullheight">
         <nav class="navbar is-success">
             <div class="container">
@@ -27,16 +29,13 @@
                         <span></span>
                     </span>
                 </div>
-
                 <div class="navbar-menu" id="navMenu">
                     <div class="navbar-end">
                         <a href="#q1" class="navbar-item">Quiz 1</a>
                         <a href="#q2" class="navbar-item">Quiz 2</a>
                         <a href="#q3" class="navbar-item">Quiz 3</a>
-                        <a href="#" class="navbar-item">Contact</a>
                     </div>
                 </div>
-
             </div>
         </nav>
         <div class="hero-body">
@@ -46,12 +45,11 @@
                     Scroll Down 
                 </h1>
             </div>
-
         </div>
     </section>
-
+    <!-- Head of page ends -->
     <div class="parallax"></div>
-
+    <!-- Introduction -->
     <section class="hero is-fullheight">
         <div class="content">
             <br>
@@ -71,7 +69,7 @@
                     <li>Xbox</li>
                     <li>PC</li>
                 </ul>
-                <hr>
+            <hr>
             <br>
                 Once you are completed with the quiz and you are sure, submit by pushing the<br>
                 submit button at the bottom and you will be presented with your results.
@@ -83,63 +81,74 @@
     </section>
 
     <div class="parallax"></div>
-
+    <!-- 3 Optional quiz categories -->
     <section class="hero is-fullheight">
         <div class="container1">
             <div class="rows">
                 <div class="row">
+                <!-- Quiz 1 -->
                 <h2 id="q1" class="header-2">Quiz 1:</h2>
+                <a href="test1.php">
                     <div class="flip-box">
                         <div class="flip-box-inner">
                             <div class="flip-box-front">
-                            <img src="img/pslogo.jpg" alt="Paris" style="width:300px;height:200px">
+                                <img src="img/pslogo.jpg" alt="Paris" style="width:300px;height:200px">
                             </div>
                             <div class="flip-box-back">
-                        <h2><u><a href="test1.php">Playstation</a></u></h2>
+                                <h2><u>Playstation</u></h2>
                             </div>
                         </div>
-                    </div> 
+                    </div>
+                </a>
                 </div>
                 <br>
-                <h2>OR</h2>
+                <!-- Option -->
+                    <h2>OR</h2>
                 <div class="row">
-                <h2 id="q2" class="header-2">Quiz 2:</h2>
+                <!-- Quiz 2 -->
+                    <h2 id="q2" class="header-2">Quiz 2:</h2>
+                <a href="test2.php">
                     <div class="flip-box">
                         <div class="flip-box-inner">
                             <div class="flip-box-front">
-                            <img src="img/xboxlogo.jpg" alt="Paris" style="width:300px;height:200px">
+                                <img src="img/xboxlogo.jpg" alt="Paris" style="width:300px;height:200px">
                             </div>
                             <div class="flip-box-back">
-                        <h2><u><a href="test2.php">Xbox</a></u></h2>
+                                <h2><u>Xbox</u></h2>
                             </div>
                         </div>
-                    </div> 
+                    </div>
+                </a>
                 </div>
                 <br>
-                <h2>OR</h2>
+                <!-- Option -->
+                    <h2>OR</h2>
                 <div class="row">
-                <h2 id="q3" class="header-2">Quiz 3:</h2>
+                <!-- Quiz 3 -->
+                    <h2 id="q3" class="header-2">Quiz 3:</h2>
+                <a href="test3.php">
                     <div class="flip-box">
                         <div class="flip-box-inner">
                             <div class="flip-box-front">
-                            <a href="test3.php"><img src="img/pclogo.jpg" alt="Paris" style="width:3    00px;height:200px"></a>
+                                <a href="test3.php"><img src="img/pclogo.jpg" alt="Paris" style="width:3    00px;height:200px"></a>
                             </div>
                             <div class="flip-box-back">
-                            <h2><u><a href="test3.php">PC</a></h2>
+                                <h2><u>PC</h2>
                             </div>
                         </div>
-                    </div> 
+                    </div>
+                </a>
                 </div>
             </div>
         </div>
     </section>
 
     <div class="parallax" id="footer"></div>
-
+    <!-- Footer -->
     <footer class="footer">
         <h2>Brought to you by R3kt-Tech</h2>
     </footer>
-
+    <!-- Javascript function for burger in header -->
     <script>
     (function() {
         var burger = document.querySelector('.burger');
