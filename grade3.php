@@ -36,8 +36,10 @@
 		<h2>PC Results</h2>
 	</header>
 <?php
+// the aswers to the questions from 1 till 20 //
 	$qanswers = array('2', '0', '2', '3', '2', '0', '0', '1', '2', '0', '1', '1', '2', '1', '0', '3', '1', '3', '2', '0');
 	$count=0;
+	// calculates the results if the answer selected = the answer //
 	if (isset($_POST)) {
 		$results = array();
 		foreach ($qanswers as $qanswer) {
@@ -46,7 +48,8 @@
 					array_push($results, $qanswer);
 			}
 			$count++;
-	 	}
+		 }
+		// Displays this result if above 15 //
 		$total = count($results);
 			switch ($total) {
 				case ($total > 15) :
@@ -60,7 +63,7 @@
 						</section>
 					<?php
 					break;
-				
+				// Displays this result if above 10 but below 16 //
 				case ($total > 10 && $total < 16):
 					?>
 						<section class="siteInfo">	
@@ -73,7 +76,7 @@
 						</section>
 					<?php
 					break;
-				
+				// Displays this result if below 10 but above 5 //
 				case ($total < 11 && $total > 5):
 					?>
 						<section class="siteInfo">	
@@ -86,7 +89,7 @@
 						</section>
 					<?php
 					break;
-				
+				// Displays this result if = 0 but below 6 //
 				case ($total < 6):
 					?>
 						<section class="siteInfo">	
@@ -110,7 +113,8 @@
 	<section class="submit">
 		<form action="index.php" method="post">
 		<h2>Retake Test</h2>
-		<input type="submit" value="Retake">
+		<!-- Added button which takes you back to the main menu if you would like to retake the test or select another one -->
+		<input type="submit" value="Retake" class="submit-button">
 		
 		</form>
 	</section>
