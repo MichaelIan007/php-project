@@ -4,6 +4,9 @@
     margin-bottom: 3em;
     border-color: red;
 }
+header {
+    margin-top: 5%; 
+}
 .hero {
     height: 300px;
 }
@@ -53,4 +56,7 @@ hr {
 }
 .left {
     margin-left: 0;
+}
+.submit-button {
+    margin-bottom: 5%;
 }
