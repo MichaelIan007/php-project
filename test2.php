@@ -102,7 +102,7 @@
                     <p class="left">
                 <br>
                 <!-- Shows the radio box for selecting your answer and displaying 4 answers to all questions -->
-                    <input type='radio' name="<?php echo $i; ?>" value="<?php echo $x ?>" id="<?php echo $n ?>">
+                    <input type='radio' name="<?php echo $i; ?>" value="<?php echo $x ?>" id="<?php echo $n ?>" required />
                     <label class="option" for="<?php echo $n ?>"><?php echo $quizq[$i][$x] ?></label>
                     </p>
                 <?php
