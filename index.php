@@ -130,7 +130,7 @@
                     <div class="flip-box">
                         <div class="flip-box-inner">
                             <div class="flip-box-front">
-                                <a href="test3.php"><img src="img/pclogo.jpg" alt="Paris" style="width:3    00px;height:200px"></a>
+                                <img src="img/pclogo.jpg" alt="Paris" style="width:3    00px;height:200px">
                             </div>
                             <div class="flip-box-back">
                                 <h2><u>PC</h2>
